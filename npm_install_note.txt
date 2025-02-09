@@ -42,3 +42,19 @@ module.exports = override(useBabelRc());
 }
 
 => giống kiểu liệt kê cho mấy cái file trong folder 
+
+5. tạo GlobalStyle.js (sass tổng)
+import "./GlobalStyle.scss";
+
+function GlobalStyle({ children }) {
+    return children;
+}
+export default GlobalStyle;
+
+6. CSS normalize: npm i normalize.css
+---  @import 'normalize.css'  ---
+mục đích => đồng nhất cách các trình duyệt hiển thị các thẻ h1, div, ....
+VD: ở chrome h1 = 21px, nhưngg ở fireFox h1 = 23px
+=> normalize.css giúp đồng nhất các giá trị!
+
+7. Set default Css: font family, font size, line-height 
