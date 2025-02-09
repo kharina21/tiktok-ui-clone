@@ -58,3 +58,11 @@ VD: ở chrome h1 = 21px, nhưngg ở fireFox h1 = 23px
 => normalize.css giúp đồng nhất các giá trị!
 
 7. Set default Css: font family, font size, line-height 
+
+8. instaill react-router-dom：npm i react-router-dom (hỗ trở chuyển đổi giữa các trang)
+
+- có thể cài thêm extension "Simple react snippets" => công dụng là để dùng sort hand 
+VD: ffc => tạo sẵn function component
+
+- cài thêm extension "htmltagwrap" => để tăng tốc wrap các thẻ
+VD cách dùng: bôi đen các đoạn code cần wrap => alt　+　W
