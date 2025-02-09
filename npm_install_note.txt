@@ -1,0 +1,44 @@
+note: nếu không biết thì search gg github
+npm install
+
+0. react, react-dom => @18.0.0
+
+1. web-vitals
+
+2. sass
+
+3.0
+//để sử dụng được 3.1 thì phải install 
+=> react-app-rewired, customize-cra
+ - tạo file config-overrides.js ở root folder rồi dán zô
+const { override, useBabelRc } = require("customize-cra");
+const path = require("path");
+module.exports = override(useBabelRc());
+
+3.1 babel-plugin-module-resolver
+// => tối ưu import file
+- tạo file .babelrc ở root folder rồi dán zô
+{
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "~": "./src"
+                }
+            }
+        ]
+    ]
+}
+
+4. tạo file jsconfig.json rồi copy paste
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["src/*"]
+        }
+    }
+}
+
+=> giống kiểu liệt kê cho mấy cái file trong folder 
