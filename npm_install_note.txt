@@ -69,3 +69,12 @@ VD cách dùng: bôi đen các đoạn code cần wrap => alt　+　W
 
 9. setup routes
 10. setup layouts
+// lưu ý tách các component thật chi tiết
+11. install thư viện classnames: npm i classnames
+=> hỗ trợ css
+import classNames from "classnames/bind";
+=> dùng để hỗ trợ viết được tên class theo kiểu "item-child"
+- nếu không dùng thì khi viết styles.item-child sẽ bị lỗi vì đang viết bằng JSX
+- thay vì dùng styles.item-child =>>>> 
+        const cx = classNames.bind(styles) 
+        <h1 className={cx('item-child')}>ABC</h1>
