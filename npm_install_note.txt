@@ -66,3 +66,6 @@ VD: ffc => tạo sẵn function component
 
 - cài thêm extension "htmltagwrap" => để tăng tốc wrap các thẻ
 VD cách dùng: bôi đen các đoạn code cần wrap => alt　+　W
+
+9. setup routes
+10. setup layouts
