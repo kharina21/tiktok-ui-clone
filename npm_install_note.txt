@@ -78,3 +78,31 @@ import classNames from "classnames/bind";
 - thay vì dùng styles.item-child =>>>> 
         const cx = classNames.bind(styles) 
         <h1 className={cx('item-child')}>ABC</h1>
+
+///một số cài đặt hay ho
+// 
+
+1. hỗ trợ search(cũng k hiểu lắm, search gg cho rõ): để hiển thị tooltips
+=> npm i @tippyjs/react
+info: 
+https://github.com/atomiks/tippyjs-react
+https://atomiks.github.io/tippyjs/v5/all-props/
+
+"headless" : để tạo các popper => import Tippy from "@tippyjs/react/headless";
+*các props của Tippy:
+- render => custom: 
+ render={(attrs) => (
+                        <div
+                            className={cx("search-result")}
+                            tabIndex="-1"
+                            {...attrs}
+                        >
+                            Result
+                        </div>
+                    )}
+- visible => tùy chỉnh điều kiện để hiện thị dữ liệu: visible={searchResult.length > 0}
+- interactive => cho phép thao tác trên dữ liệu được hiển thị: interactive={true}
+
+
+//28:13 p3 button
+
