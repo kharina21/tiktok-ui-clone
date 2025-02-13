@@ -2,7 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap");
 
 :root {
-    --primary: #ff3b5c;
+    --primary: #dc4c64;
+    --success: #14a44d;
+    --light: #f5f5f5;
+    --dark: #262626;
+    --info: #54b4d3;
+    --warning: #e4a11b;
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --black: #000;
@@ -31,8 +36,11 @@ input,
     outline: none;
     border: none;
 }
+button {
+    cursor: pointer;
+}
 
-a[href] {
+a {
     color: var(--text-color);
     text-decoration: none;
 }

@@ -2,38 +2,99 @@
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.6rem;
     font-weight: 700;
     border: 1px solid transparent;
     background-color: transparent;
-
+    user-select: none;
     + .wrapper {
         margin-left: 8px;
     }
 }
 
 //Button type
-.primary {
+.primary,
+.light,
+.success,
+.dark,
+.warning,
+.info {
+    --btn-color: var(--primary);
     color: var(--white);
-    background-color: var(--primary);
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
     cursor: pointer;
-    &:hover {
-        background: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, 0.06),
-                rgba(0, 0, 0, 0.06)
-            ),
-            #fe2c55;
+    &.primary {
+        --btn-color: var(--primary);
+        --btn-bg-color: 209, 72.2, 95;
+        &:hover {
+            background-color: rgb(209, 72.2, 95);
+        }
+    }
+    &.light {
+        --btn-color: var(--light);
+        --btn-bg-color: 232.75, 232.75, 232.75;
+        color: #616161;
+        &:hover {
+            background-color: rgb(232.75, 232.75, 232.75);
+        }
+    }
+    &.warning {
+        --btn-color: var(--warning);
+        --btn-bg-color: 216.6, 152.95, 25.65;
+        &:hover {
+            background-color: rgb(216.6, 152.95, 25.65);
+        }
+    }
+    &.dark {
+        --btn-color: var(--dark);
+        --btn-bg-color: 48.85, 48.85, 48.85;
+        &:hover {
+            background-color: rgb(48.85, 48.85, 48.85);
+        }
+    }
+    &.success {
+        --btn-color: var(--success);
+        --btn-bg-color: 19, 155.8, 73.15;
+        &:hover {
+            background-color: rgb(19, 155.8, 73.15);
+        }
+    }
+    &.info {
+        --btn-color: var(--info);
+        --btn-bg-color: 79.8, 171, 200.45;
+        &:hover {
+            background-color: rgb(79.8, 171, 200.45);
+        }
+    }
+
+    &.outline {
+        color: var(--btn-color);
+        background-color: transparent;
+        border: 2px solid var(--btn-color);
+        &:hover {
+            background-color: rgba(var(--btn-bg-color), 0.2);
+        }
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
     }
 }
 
-.outline {
-    color: var(--primary);
-    border-color: currentColor;
-    background-color: transparent;
+.text {
+    cursor: pointer;
     &:hover {
-        background-color: rgba(254, 44, 85, 0.06);
+        text-decoration: underline;
+        background-color: none;
     }
+}
+
+.rounded {
+    border-radius: 92px;
 }
 
 //button size
@@ -44,4 +105,12 @@
 .large {
     min-width: 136px;
     padding: 14px 16px;
+}
+
+.custom-btn {
+}
+
+.left-icon + .title,
+.title + .right-icon {
+    margin-left: 8px;
 }
