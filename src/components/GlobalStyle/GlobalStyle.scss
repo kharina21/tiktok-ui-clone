@@ -12,7 +12,7 @@
     --default-layout-width: 1150px;
     --black: #000;
     --white: #fff;
-    --text-color: #333;
+    --text-color: #161823;
 }
 * {
     margin: 0;
@@ -43,4 +43,25 @@ button {
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+//custom tippy tooltip
+body {
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 0.92);
+        border-radius: 8px;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.2rem;
+    }
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+    .tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
+        top: -8px;
+    }
 }
